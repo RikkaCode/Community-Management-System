@@ -1,0 +1,37 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmk.web.team.mapper.TeamMapper">
+    <select id="echartList" resultType="com.itmk.web.home.entity.EchartItem">
+        select t.name,count(t.id) as value from team as t
+        left join join_team as jt
+        on jt.team_id = t.id
+        GROUP BY t.id,t.name
+        ORDER BY t.create_time asc
+#         select t.name, count(t.id) as value, MAX(t.create_time) as last_create_time from team as t
+#         left join join_team as jt
+#         on jt.team_id = t.id
+#         GROUP BY t.id, t.name
+#         ORDER BY last_create_time asc
+    </select>
+
+    <select id="hotTeamList" resultType="com.itmk.web.home.entity.EchartItem">
+        select t.name,count(t.id) as value from team as t
+        left join join_team as jt
+        on jt.team_id = t.id
+        GROUP BY t.id,t.name
+        ORDER BY value desc
+        limit 5
+    </select>
+
+    <select id="hotActivityList" resultType="com.itmk.web.home.entity.EchartItem">
+        select t.title as name,count(t.id) as value from news as t
+        left join join_activity as jt
+        on jt.activity_id = t.id
+        where t.type = '0'
+        GROUP BY t.id,t.title
+        ORDER BY value desc
+        limit 5
+    </select>
+</mapper>

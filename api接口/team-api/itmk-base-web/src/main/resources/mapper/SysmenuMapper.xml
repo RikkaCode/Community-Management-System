@@ -1,0 +1,38 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmk.web.sys_menu.mapper.SysMenuMapper">
+    <select id="getMenuByUserId" resultType="com.itmk.web.sys_menu.entity.SysMenu">
+        select * from user_menu as ur
+        left join sys_menu as m on ur.menu_id = m.menu_id
+        where ur.user_id = #{userId}
+        order by m.order_num asc
+    </select>
+
+    <select id="getMenuVoById" resultType="com.itmk.web.sys_menu.entity.MenuVo">
+        select m.menu_id, m.title, m.path, m.icon FROM user_menu as ur
+        left join sys_menu as m on ur.menu_id = m.menu_id
+        where ur.user_id = #{userId} and type = '1'
+        order by m.order_num asc
+    </select>
+
+    <select id="getCodeVoById" resultType="com.itmk.web.sys_menu.entity.CodeVo">
+        select m.code FROM user_menu as ur
+        left join sys_menu as m on ur.menu_id = m.menu_id
+        where ur.user_id = #{userId} and type = '2'
+        order by m.order_num asc
+    </select>
+
+    <select id="getMenuNoVoById" resultType="com.itmk.web.sys_menu.entity.MenuVo">
+        select m.menu_id, m.title, m.path, m.icon from sys_menu as m
+        where type ='1'
+        order by m.order_num asc
+    </select>
+
+    <select id="getCodeNoVoById" resultType="com.itmk.web.sys_menu.entity.CodeVo">
+        select m.code from sys_menu as m
+        where  type ='2'
+        order by m.order_num asc
+    </select>
+</mapper>

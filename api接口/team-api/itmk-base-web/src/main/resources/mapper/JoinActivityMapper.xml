@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmk.web.join_activity.mapper.JoinActivityMapper">
+    <select id="getMyActivity" resultType="com.itmk.web.news.entity.News">
+        select t.*,jt.create_time as join_time from join_activity jt
+        inner join news as t on jt.activity_id = t.id
+        where t.type = '0' and jt.stu_id = #{stuId}
+    </select>
+</mapper>

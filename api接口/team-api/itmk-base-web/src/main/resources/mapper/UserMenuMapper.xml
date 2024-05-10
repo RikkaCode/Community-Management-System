@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmk.web.user_menu.mapper.UserMenuMapper">
+    <insert id="saveUserMenu">
+        insert into user_menu(user_id,menu_id) values
+        <foreach collection="menuIds" separator="," item="item" index="index">
+            (#{userId},#{item})
+        </foreach>
+    </insert>
+</mapper>

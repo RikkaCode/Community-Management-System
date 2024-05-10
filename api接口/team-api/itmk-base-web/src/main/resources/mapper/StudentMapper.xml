@@ -1,0 +1,44 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmk.web.student.mapper.StudentMapper">
+    <select id="getStuPage" resultType="com.itmk.web.student.entity.Student">
+        select t.name as team_name,st.* from join_team as jt
+        inner join team as t on t.id = jt.team_id
+        inner join student as st on jt.stu_id = st.sut_id
+        where 1=1
+        <if test="name != null and name !=''">
+            and st.name like concat('%', #{name}, '%')
+        </if>
+        <if test="teamId != null and teamId !=''">
+            and jt.team_id=#{teamId}
+        </if>
+    </select>
+
+    <select id="exportStuPage" resultType="com.itmk.web.student.entity.Student">
+        select t.name as team_name,st.* from join_team as jt
+        inner join team as t on t.id = jt.team_id
+        inner join student as st on jt.stu_id = st.sut_id
+        where 1=1
+        <if test="teamId != null and teamId !=''">
+            and jt.team_id=#{teamId}
+        </if>
+    </select>
+
+    <select id="exportStuActivity" resultType="com.itmk.web.student.entity.Student">
+        select st.* from join_activity as jt
+        inner join news as t on t.id = jt.activity_id
+        inner join student as st on jt.stu_id = st.sut_id
+        where 1=1
+        <if test="activityId != null and activityId !=''">
+            and  jt.activity_id =#{activityId}
+        </if>
+    </select>
+
+    <select id="stuTotal" resultType="com.itmk.web.home.entity.StuTotalParm">
+        select sum(case when sex='0' then 1 else 0 end) as mcount,
+        sum(case when sex='1' then 1 else 0 end) as wcount
+        from student
+    </select>
+</mapper>
