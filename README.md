@@ -40,60 +40,60 @@
 
 ###  运行截图
 
-**登录界面 **
+**登录界面 ![bc12c4c01d225bceea65bc8da2e3491](img/bc12c4c01d225bceea65bc8da2e3491.png)**
 
-![bc12c4c01d225bceea65bc8da2e3491](D:\Code\Community Management System\img\bc12c4c01d225bceea65bc8da2e3491.png)
+
 
 
 
 **注册界面**
 
-![093319f30b1107f3c320300f3ce07dc](D:\Code\Community Management System\img\093319f30b1107f3c320300f3ce07dc.png)
+![093319f30b1107f3c320300f3ce07dc](img/093319f30b1107f3c320300f3ce07dc.png)
 
 
 
 **前端首页界面**
 
-![6be7e366e33110ff2b5ba601a656577](D:\Code\Community Management System\img\6be7e366e33110ff2b5ba601a656577.png)
+![6be7e366e33110ff2b5ba601a656577](img/6be7e366e33110ff2b5ba601a656577.png)
 
 
 
 **社团列表**
 
-![96d2f93ebd51d370bb0af270e8fbe22](D:\Code\Community Management System\img\96d2f93ebd51d370bb0af270e8fbe22.png)
+![96d2f93ebd51d370bb0af270e8fbe22](img/96d2f93ebd51d370bb0af270e8fbe22.png)
 
 
 
 **活动列表**
 
-![e1bc8a4ed10328c9fd8b815dd3e9271](D:\Code\Community Management System\img\e1bc8a4ed10328c9fd8b815dd3e9271.png)
+![e1bc8a4ed10328c9fd8b815dd3e9271](img/e1bc8a4ed10328c9fd8b815dd3e9271.png)
 
 
 
 **活动详情展示**
 
-![a34d7ee76d0e79bf9224983311cb00c](D:\Code\Community Management System\img\a34d7ee76d0e79bf9224983311cb00c.png)
+![a34d7ee76d0e79bf9224983311cb00c](img/a34d7ee76d0e79bf9224983311cb00c.png)
 
 
 
 **后台数据首页**
 
-![193d52ab6e05a5b4b941a8e1772a709](D:\Code\Community Management System\img\193d52ab6e05a5b4b941a8e1772a709.png)
+![193d52ab6e05a5b4b941a8e1772a709](img/193d52ab6e05a5b4b941a8e1772a709.png)
 
 
 
 **活动、新闻、公告审批**（可导出Excel）
 
-![6c0c5e5fe0f58d89fc1aceb3aa0b434](D:\Code\Community Management System\img\6c0c5e5fe0f58d89fc1aceb3aa0b434.png)
+![6c0c5e5fe0f58d89fc1aceb3aa0b434](img/6c0c5e5fe0f58d89fc1aceb3aa0b434.png)
 
 
 
 **社团成员列表**（可导出Excel）
 
-![33fc0acd2b47fc33ff18ce221d4205e](D:\Code\Community Management System\img\33fc0acd2b47fc33ff18ce221d4205e.png)
+![33fc0acd2b47fc33ff18ce221d4205e](img/33fc0acd2b47fc33ff18ce221d4205e.png)
 
 
 
 **权限分配列表**
 
-![a633e57fd3bad6b893ea9084b1ad050](D:\Code\Community Management System\img\a633e57fd3bad6b893ea9084b1ad050.png)
+![a633e57fd3bad6b893ea9084b1ad050](img/a633e57fd3bad6b893ea9084b1ad050.png)
